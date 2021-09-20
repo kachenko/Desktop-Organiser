@@ -31,8 +31,11 @@ namespace Desktop_Organiser
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.showBtn = new System.Windows.Forms.Button();
+            this.rank = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.text = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.isActive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -45,23 +48,19 @@ namespace Desktop_Organiser
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.rank,
+            this.title,
+            this.text,
+            this.isActive});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 88);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(341, 260);
+            this.listView1.Size = new System.Drawing.Size(693, 260);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.Visible = false;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(350, 88);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(346, 260);
-            this.listBox1.TabIndex = 2;
-            this.listBox1.Visible = false;
             // 
             // showBtn
             // 
@@ -73,12 +72,31 @@ namespace Desktop_Organiser
             this.showBtn.UseVisualStyleBackColor = true;
             this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
             // 
+            // rank
+            // 
+            this.rank.Text = "Rank";
+            this.rank.Width = 134;
+            // 
+            // title
+            // 
+            this.title.Text = "Title";
+            this.title.Width = 123;
+            // 
+            // text
+            // 
+            this.text.Text = "Text";
+            this.text.Width = 122;
+            // 
+            // isActive
+            // 
+            this.isActive.Text = "isActive";
+            this.isActive.Width = 132;
+            // 
             // showEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.showBtn);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "showEvent";
@@ -91,7 +109,10 @@ namespace Desktop_Organiser
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button showBtn;
+        private System.Windows.Forms.ColumnHeader rank;
+        private System.Windows.Forms.ColumnHeader title;
+        private System.Windows.Forms.ColumnHeader text;
+        private System.Windows.Forms.ColumnHeader isActive;
     }
 }
