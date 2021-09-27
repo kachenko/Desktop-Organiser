@@ -13,16 +13,16 @@ using System.Data.SqlClient;
 
 namespace Desktop_Organiser
 {
-    public partial class showEvent : UserControl
+    public partial class addEvent : UserControl
     {
         private SqlConnection sqlConnection = null;
 
-        public showEvent()
+        public addEvent()
         {
             InitializeComponent();
             listView1.Visible = false;
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Organiser"].ConnectionString);
-            sqlConnection.Open();
+            //sqlConnection.Open();
         }
 
         private void showBtn_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace Desktop_Organiser
 
                 ListViewItem item = null;
 
-                while(dataReader.Read())
+                while (dataReader.Read())
                 {
                     item = new ListViewItem(new string[] { Convert.ToString(dataReader["rank"]),
                                                            Convert.ToString(dataReader["title"]),
@@ -56,13 +56,18 @@ namespace Desktop_Organiser
             }
             finally
             {
-                if(dataReader != null && !dataReader.IsClosed)
+                if (dataReader != null && !dataReader.IsClosed)
                 {
                     dataReader.Close();
                 }
             }
 
             listView1.Visible = true;
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

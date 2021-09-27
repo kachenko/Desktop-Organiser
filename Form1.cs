@@ -16,7 +16,8 @@ namespace Desktop_Organiser
     public partial class Form1 : Form
     {
         private SqlConnection sqlConnection = null;
-        showEvent addevent = new showEvent();
+        showEvent showevent = new showEvent();
+        addEvent addevent = new addEvent();
 
         public Form1()
         {
@@ -35,16 +36,28 @@ namespace Desktop_Organiser
             menuPnl.Show();
         }
 
+        private void showEventBtn_Click(object sender, EventArgs e)
+        {
+            menuPnl.Hide();
+            showevent.Location = new Point(0, 31);
+            this.Controls.Add(showevent);
+            sqlConnection.Close();
+        }
+
         private void addEventBtn_Click(object sender, EventArgs e)
         {
             menuPnl.Hide();
             addevent.Location = new Point(0, 31);
             this.Controls.Add(addevent);
+            sqlConnection.Close();
         }
 
         private void editEventBtn_Click(object sender, EventArgs e)
         {
             menuPnl.Hide();
+            sqlConnection.Close();
         }
+
+
     }
 }

@@ -39,10 +39,12 @@ namespace Desktop_Organiser
             this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEventBtn = new System.Windows.Forms.Button();
+            this.showEventBtn = new System.Windows.Forms.Button();
             this.editEventBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.menuPnl = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addEventBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.menuPnl.SuspendLayout();
             this.SuspendLayout();
@@ -124,19 +126,19 @@ namespace Desktop_Organiser
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // addEventBtn
+            // showEventBtn
             // 
-            this.addEventBtn.Location = new System.Drawing.Point(345, 3);
-            this.addEventBtn.Name = "addEventBtn";
-            this.addEventBtn.Size = new System.Drawing.Size(121, 32);
-            this.addEventBtn.TabIndex = 2;
-            this.addEventBtn.Text = "Show";
-            this.addEventBtn.UseVisualStyleBackColor = true;
-            this.addEventBtn.Click += new System.EventHandler(this.addEventBtn_Click);
+            this.showEventBtn.Location = new System.Drawing.Point(345, 3);
+            this.showEventBtn.Name = "showEventBtn";
+            this.showEventBtn.Size = new System.Drawing.Size(121, 32);
+            this.showEventBtn.TabIndex = 2;
+            this.showEventBtn.Text = "Show";
+            this.showEventBtn.UseVisualStyleBackColor = true;
+            this.showEventBtn.Click += new System.EventHandler(this.showEventBtn_Click);
             // 
             // editEventBtn
             // 
-            this.editEventBtn.Location = new System.Drawing.Point(345, 41);
+            this.editEventBtn.Location = new System.Drawing.Point(345, 79);
             this.editEventBtn.Name = "editEventBtn";
             this.editEventBtn.Size = new System.Drawing.Size(121, 32);
             this.editEventBtn.TabIndex = 3;
@@ -147,7 +149,7 @@ namespace Desktop_Organiser
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 49);
+            this.label2.Location = new System.Drawing.Point(236, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 4;
@@ -155,7 +157,9 @@ namespace Desktop_Organiser
             // 
             // menuPnl
             // 
+            this.menuPnl.Controls.Add(this.label3);
             this.menuPnl.Controls.Add(this.addEventBtn);
+            this.menuPnl.Controls.Add(this.showEventBtn);
             this.menuPnl.Controls.Add(this.label2);
             this.menuPnl.Controls.Add(this.label1);
             this.menuPnl.Controls.Add(this.editEventBtn);
@@ -163,6 +167,25 @@ namespace Desktop_Organiser
             this.menuPnl.Name = "menuPnl";
             this.menuPnl.Size = new System.Drawing.Size(699, 125);
             this.menuPnl.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(231, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Add new events";
+            // 
+            // addEventBtn
+            // 
+            this.addEventBtn.Location = new System.Drawing.Point(345, 41);
+            this.addEventBtn.Name = "addEventBtn";
+            this.addEventBtn.Size = new System.Drawing.Size(121, 32);
+            this.addEventBtn.TabIndex = 5;
+            this.addEventBtn.Text = "Add";
+            this.addEventBtn.UseVisualStyleBackColor = true;
+            this.addEventBtn.Click += new System.EventHandler(this.addEventBtn_Click);
             // 
             // Form1
             // 
@@ -173,6 +196,7 @@ namespace Desktop_Organiser
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -196,10 +220,12 @@ namespace Desktop_Organiser
         private System.Windows.Forms.ToolStripMenuItem yearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editEventToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Button addEventBtn;
+        private System.Windows.Forms.Button showEventBtn;
         private System.Windows.Forms.Button editEventBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel menuPnl;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button addEventBtn;
     }
 }
 

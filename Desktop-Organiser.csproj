@@ -69,6 +69,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="addEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addEvent.Designer.cs">
+      <DependentUpon>addEvent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="showEvent.resx">
       <DependentUpon>showEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addEvent.resx">
+      <DependentUpon>addEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="organizerDataSet.xsc">
       <DependentUpon>organizerDataSet.xsd</DependentUpon>
     </None>
