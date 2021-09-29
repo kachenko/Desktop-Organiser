@@ -16,6 +16,7 @@ namespace Desktop_Organiser
     public partial class showEvent : UserControl
     {
         private SqlConnection sqlConnection = null;
+        
 
         public showEvent()
         {
@@ -28,17 +29,12 @@ namespace Desktop_Organiser
         private void showBtn_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-
             SqlDataReader dataReader = null;
-
             try
             {
                 SqlCommand sqlCommand = new SqlCommand("SELECT [rank], [title], [text], [isActive] FROM [dbo].[orgEvents]", sqlConnection);
-
                 dataReader = sqlCommand.ExecuteReader();
-
                 ListViewItem item = null;
-
                 while(dataReader.Read())
                 {
                     item = new ListViewItem(new string[] { Convert.ToString(dataReader["rank"]),
@@ -64,5 +60,6 @@ namespace Desktop_Organiser
 
             listView1.Visible = true;
         }
+
     }
 }

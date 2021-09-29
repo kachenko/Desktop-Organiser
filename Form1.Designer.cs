@@ -45,6 +45,7 @@ namespace Desktop_Organiser
             this.menuPnl = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.addEventBtn = new System.Windows.Forms.Button();
+            this.quitBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.menuPnl.SuspendLayout();
             this.SuspendLayout();
@@ -187,11 +188,22 @@ namespace Desktop_Organiser
             this.addEventBtn.UseVisualStyleBackColor = true;
             this.addEventBtn.Click += new System.EventHandler(this.addEventBtn_Click);
             // 
+            // quitBtn
+            // 
+            this.quitBtn.Location = new System.Drawing.Point(569, 402);
+            this.quitBtn.Name = "quitBtn";
+            this.quitBtn.Size = new System.Drawing.Size(121, 32);
+            this.quitBtn.TabIndex = 6;
+            this.quitBtn.Text = "Quit";
+            this.quitBtn.UseVisualStyleBackColor = true;
+            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 396);
+            this.ClientSize = new System.Drawing.Size(699, 443);
+            this.Controls.Add(this.quitBtn);
             this.Controls.Add(this.menuPnl);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -226,6 +238,7 @@ namespace Desktop_Organiser
         private System.Windows.Forms.Panel menuPnl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button addEventBtn;
+        private System.Windows.Forms.Button quitBtn;
     }
 }
 

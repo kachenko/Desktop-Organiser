@@ -28,12 +28,7 @@ namespace Desktop_Organiser
         {
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Organiser"].ConnectionString);
 
-            sqlConnection.Open();
 
-            if (sqlConnection.State == ConnectionState.Open)
-                MessageBox.Show("OK");
-            
-            menuPnl.Show();
         }
 
         private void showEventBtn_Click(object sender, EventArgs e)
@@ -41,7 +36,8 @@ namespace Desktop_Organiser
             menuPnl.Hide();
             showevent.Location = new Point(0, 31);
             this.Controls.Add(showevent);
-            sqlConnection.Close();
+            showevent.Visible = true;
+
         }
 
         private void addEventBtn_Click(object sender, EventArgs e)
@@ -49,15 +45,29 @@ namespace Desktop_Organiser
             menuPnl.Hide();
             addevent.Location = new Point(0, 31);
             this.Controls.Add(addevent);
-            sqlConnection.Close();
+            addevent.Visible = true;
+
         }
 
         private void editEventBtn_Click(object sender, EventArgs e)
         {
             menuPnl.Hide();
-            sqlConnection.Close();
+
         }
 
+        private void quitBtn_Click(object sender, EventArgs e)
+        {
+            if (menuPnl.Visible)
+            {
+                this.Close();
+            }
+            else if (!menuPnl.Visible && addevent.Visible || !menuPnl.Visible && showevent.Visible)
+            {
+                addevent.Visible = false;
+                showevent.Visible = false;
+                menuPnl.Show();
+            }
 
+        }
     }
 }

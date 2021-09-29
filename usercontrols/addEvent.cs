@@ -22,7 +22,8 @@ namespace Desktop_Organiser
             InitializeComponent();
             listView1.Visible = false;
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Organiser"].ConnectionString);
-            //sqlConnection.Open();
+            
+            sqlConnection.Open();
         }
 
         private void showBtn_Click(object sender, EventArgs e)
