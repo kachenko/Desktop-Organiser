@@ -32,7 +32,9 @@ namespace Desktop_Organiser
             SqlDataReader dataReader = null;
             try
             {
-                SqlCommand sqlCommand = new SqlCommand("SELECT [rank], [title], [text], [isActive] FROM [dbo].[orgEvents]", sqlConnection);
+                string val = this.dateTimePicker1.Value.ToString("dd.MM.yyyy");
+                SqlCommand sqlCommand = new SqlCommand("SELECT [rank], [title], [text], [isActive] FROM [dbo].[orgEvents] WHERE convert(varchar, remindAt, 104) = @date", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@date", val);
                 dataReader = sqlCommand.ExecuteReader();
                 ListViewItem item = null;
                 while(dataReader.Read())
@@ -61,5 +63,9 @@ namespace Desktop_Organiser
             listView1.Visible = true;
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker1.CustomFormat = "yyyy-mm-dd";
+        }
     }
 }

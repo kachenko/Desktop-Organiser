@@ -13,13 +13,13 @@ using System.Data.SqlClient;
 
 namespace Desktop_Organiser
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private SqlConnection sqlConnection = null;
         showEvent showevent = new showEvent();
         addEvent addevent = new addEvent();
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

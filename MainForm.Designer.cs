@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop_Organiser
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -40,8 +40,6 @@ namespace Desktop_Organiser
             this.editEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showEventBtn = new System.Windows.Forms.Button();
-            this.editEventBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuPnl = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.addEventBtn = new System.Windows.Forms.Button();
@@ -53,11 +51,11 @@ namespace Desktop_Organiser
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 11);
+            this.label1.Location = new System.Drawing.Point(231, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Show your events";
+            this.label1.Text = "Show all events";
             // 
             // menuStrip1
             // 
@@ -67,7 +65,7 @@ namespace Desktop_Organiser
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(699, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(699, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,7 +75,7 @@ namespace Desktop_Organiser
             this.newEventToolStripMenuItem,
             this.editEventToolStripMenuItem});
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
             this.generalToolStripMenuItem.Text = "General";
             // 
             // newEventToolStripMenuItem
@@ -124,7 +122,7 @@ namespace Desktop_Organiser
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // showEventBtn
@@ -137,33 +135,12 @@ namespace Desktop_Organiser
             this.showEventBtn.UseVisualStyleBackColor = true;
             this.showEventBtn.Click += new System.EventHandler(this.showEventBtn_Click);
             // 
-            // editEventBtn
-            // 
-            this.editEventBtn.Location = new System.Drawing.Point(345, 79);
-            this.editEventBtn.Name = "editEventBtn";
-            this.editEventBtn.Size = new System.Drawing.Size(121, 32);
-            this.editEventBtn.TabIndex = 3;
-            this.editEventBtn.Text = "Edit";
-            this.editEventBtn.UseVisualStyleBackColor = true;
-            this.editEventBtn.Click += new System.EventHandler(this.editEventBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Edit your event";
-            // 
             // menuPnl
             // 
             this.menuPnl.Controls.Add(this.label3);
             this.menuPnl.Controls.Add(this.addEventBtn);
             this.menuPnl.Controls.Add(this.showEventBtn);
-            this.menuPnl.Controls.Add(this.label2);
             this.menuPnl.Controls.Add(this.label1);
-            this.menuPnl.Controls.Add(this.editEventBtn);
             this.menuPnl.Location = new System.Drawing.Point(0, 31);
             this.menuPnl.Name = "menuPnl";
             this.menuPnl.Size = new System.Drawing.Size(699, 125);
@@ -209,7 +186,7 @@ namespace Desktop_Organiser
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Organiser";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -233,8 +210,6 @@ namespace Desktop_Organiser
         private System.Windows.Forms.ToolStripMenuItem editEventToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button showEventBtn;
-        private System.Windows.Forms.Button editEventBtn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel menuPnl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button addEventBtn;
